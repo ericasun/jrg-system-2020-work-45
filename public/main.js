@@ -33,7 +33,6 @@ getXML.onclick = () => {
     request.open("GET", '/4.xml')
     request.onreadystatechange = () => {
         if(request.readyState === 4 && request.status === 200){
-            console.log(request)
             const dom = request.responseXML;
             const text = dom.getElementsByTagName('warning')[0].textContent
             console.log(text.trim())
